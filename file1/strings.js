@@ -3,12 +3,12 @@ const repoCount = 5
 
 // console.log(name + repoCount + " Value");
 
-console.log(`Hello my name is ${name} and my repo count is ${repoCount}`);
+console.log(`Hello my name is ${name} and my repo count is ${repoCount}`)
 
 const gameName = new String('rk-hc-com')
 
 // console.log(gameName[0]);
-// console.log(gameName.__proto__);
+console.log(gameName.__proto__) //this is the prototype of the string object, it contains all the methods that we can use on string data type
 
 
 // console.log(gameName.length);
