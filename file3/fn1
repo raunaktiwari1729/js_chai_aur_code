@@ -1,4 +1,0 @@
-function c1(){
-    console.log("This is fn")
-}
-c1()
