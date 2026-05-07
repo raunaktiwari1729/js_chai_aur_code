@@ -17,5 +17,9 @@ Prefer not to use var
 because of issue in block scope and functional scope
 */
 
+if (true) {
+  var x = 5;
+}
+console.log(x) //leaking
 
 console.table({accountId, accountEmail, accountPassword, accountCity, accountState})
