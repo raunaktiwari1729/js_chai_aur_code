@@ -1,0 +1,40 @@
+const arr = ["s1","s2","s3"];
+let text = "";
+arr.forEach(myFunction);
+
+function myFunction(item, index) {
+  console.log(item)
+}
+
+for (const element of arr) {
+    console.log(element)
+}
+
+const str="string"
+
+for (const gr of str) {
+    console.log(gr)
+}
+
+//Maps
+
+
+const map = new Map()
+map.set('IN', "India")
+map.set('USA', "United States of America")
+map.set('Fr', "France")
+map.set('IN', "India")
+
+console.log(map)
+for (const [key,value] of map) {
+    console.log(key);
+}
+
+const cntr={
+    "India":"delhi",
+    "pak":"islm"
+}
+
+for (const element in cntr) {
+    console.log(element)
+}
