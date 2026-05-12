@@ -41,28 +41,40 @@ buttons.forEach(function (button) {
 ```javascript
 //if used before empty
 
-const form=document.querySelector('form')
+const form = document.querySelector('form');
 
-form.addEventListener('submit',function(e){
-   e.preventDefault()
-   let height=parseInt(form.querySelector("#height").value)
-   const weight=parseInt(form.querySelector("#weight").value)
+form.addEventListener('submit', function (e) {
+  e.preventDefault();
+  let height = parseInt(form.querySelector('#height').value);
+  const weight = parseInt(form.querySelector('#weight').value);
 
-   height=height/100
+  height = height / 100;
 
-   const results=document.querySelector('#results');
+  const results = document.querySelector('#results');
 
-   if(height===''|| height<0 || isNaN(height)){
-     results.innerHTML="Give vaild height"
-   }
-   if(weight===''|| weight<0 || isNaN(weight)){
-    results.innerHTML="Give vaild weight"
+  if (height === '' || height < 0 || isNaN(height)) {
+    results.innerHTML = 'Give vaild height';
   }
-   const output=CalculateBmi(height,weight)
-   results.innerHTML=`BMI is ${output}`
+  if (weight === '' || weight < 0 || isNaN(weight)) {
+    results.innerHTML = 'Give vaild weight';
+  }
+  const output = CalculateBmi(height, weight);
+  const res = Decision(output);
+  results.innerHTML = `BMI is ${output} and you are ${res}`;
+});
 
+function CalculateBmi(height, weight) {
+  return weight / (height * height);
+}
 
-})
+function Decision(BMI) {
+  if (BMI < 18.6) {
+    return 'UnderWeight';
+  } else if ((BMI > 18.6) & (BMI < 24.9)) {
+    return 'Normal';
+  } else return 'OverWeight';
+}
+
 
 ```
 
