@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript Course</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    
+</body>
+<script>
+    //In console start writing hi and time on clicking start and vice versa
+    const sayHi = function(){
+        console.log("hi", Date.now());
+    }
+    
+    let changeMe;
+    
+
+    document.querySelector('#start').addEventListener('click', function(){
+       changeMe= setInterval(sayHi
+    , 20)
+    })
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearTimeout(changeMe)
+    })
+</script>
+</html>
